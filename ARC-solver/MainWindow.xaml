@@ -38,7 +38,6 @@
         <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Training pairs" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
-                <TextBlock x:Name="loadedText" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
         </ScrollViewer>
         <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">

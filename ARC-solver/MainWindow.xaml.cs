@@ -47,7 +47,9 @@ namespace ARC_solver
             trainingTaskList.ItemsSource = trainingProblems;
             evaluationTaskList.ItemsSource = evaluationProblems;
             sw.Stop();
-            loadedText.Text = $"{trainingProblems.Count} training tasks and\n{evaluationProblems.Count} evaluation tasks\nloaded in {sw.ElapsedMilliseconds/1000.0} s";
+
+            MessageBox.Show($"{trainingProblems.Count} training tasks and\n{evaluationProblems.Count} evaluation tasks\nloaded in {sw.ElapsedMilliseconds / 1000.0}s",
+                            "timer info");
         }
     }
 }
