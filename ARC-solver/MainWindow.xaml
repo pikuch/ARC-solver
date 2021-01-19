@@ -1,0 +1,24 @@
+﻿<Window x:Class="ARC_solver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARC_solver"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="Training">
+                <ListBox x:Name="trainingTaskList" Margin="10"></ListBox>
+            </TabItem>
+            <TabItem Header="Evaluation">
+                <ListBox x:Name="evaluationTaskList" Margin="10"></ListBox>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
