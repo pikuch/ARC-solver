@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ARC_solver"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
     </Application.Resources>
 </Application>
