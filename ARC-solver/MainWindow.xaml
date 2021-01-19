@@ -10,12 +10,21 @@
         FontSize="16">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TabControl Grid.Column="0">
+        
+        <TextBlock Text="Data source" Grid.Row="0" Grid.Column="0" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="Training pairs" Grid.Row="0" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="Testing pairs" Grid.Row="0" Grid.Column="2" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+        <TabControl Grid.Row="1" Grid.Column="0">
             <TabItem Header="Training">
                 <ListBox x:Name="trainingTaskList">
                     <ListBox.ItemTemplate>
@@ -35,14 +44,12 @@
                 </ListBox>
             </TabItem>
         </TabControl>
-        <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="Training pairs" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="trainingPairsPanel" Orientation="Vertical">
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="Testing pairs" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <ScrollViewer Grid.Row="1" Grid.Column="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="evaluationPairsPanel" Orientation="Vertical">
             </StackPanel>
         </ScrollViewer>
     </Grid>
