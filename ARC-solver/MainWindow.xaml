@@ -26,7 +26,7 @@
 
         <TabControl Grid.Row="1" Grid.Column="0">
             <TabItem Header="Training">
-                <ListBox x:Name="trainingTaskList">
+                <ListBox x:Name="trainingTaskList" SelectionChanged="taskList_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding name}"/>
@@ -35,7 +35,7 @@
                 </ListBox>
             </TabItem>
             <TabItem Header="Evaluation">
-                <ListBox x:Name="evaluationTaskList">
+                <ListBox x:Name="evaluationTaskList" SelectionChanged="taskList_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding name}"/>

@@ -46,10 +46,22 @@ namespace ARC_solver
 
             trainingTaskList.ItemsSource = trainingProblems;
             evaluationTaskList.ItemsSource = evaluationProblems;
+            
             sw.Stop();
 
             MessageBox.Show($"{trainingProblems.Count} training tasks and\n{evaluationProblems.Count} evaluation tasks\nloaded in {sw.ElapsedMilliseconds / 1000.0}s",
                             "timer info");
+        }
+
+        private void taskList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            generateTaskView((Problem)(sender as ListBox).SelectedItem);
+        }
+
+        private void generateTaskView(Problem problem)
+        {
+            
+            throw new NotImplementedException();
         }
     }
 }
