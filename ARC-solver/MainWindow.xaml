@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ARC_solver"
         mc:Ignorable="d"
-        Title="ARC solver" Height="800" Width="1200">
+        Title="ARC solver" Height="800" Width="1200"
+        FontFamily="Consolas"
+        FontSize="16">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -13,7 +16,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TabControl Grid.Column="0">
-            <TabItem Header="Training" FontFamily="Consolas" FontSize="16">
+            <TabItem Header="Training">
                 <ListBox x:Name="trainingTaskList">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -22,7 +25,7 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </TabItem>
-            <TabItem Header="Evaluation" FontFamily="Consolas" FontSize="16">
+            <TabItem Header="Evaluation">
                 <ListBox x:Name="evaluationTaskList">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -34,13 +37,13 @@
         </TabControl>
         <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical">
-                <TextBlock Text="Training pairs" FontFamily="Consolas" TextAlignment="Center" FontSize="16" HorizontalAlignment="Center"></TextBlock>
-                <TextBlock x:Name="loadedText" FontFamily="Consolas" TextAlignment="Center" FontSize="16" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Training pairs" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="loadedText" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
         </ScrollViewer>
         <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical">
-                <TextBlock Text="Testing pairs" FontFamily="Consolas" TextAlignment="Center" FontSize="16" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Testing pairs" TextAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
         </ScrollViewer>
     </Grid>
